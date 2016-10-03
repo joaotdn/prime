@@ -1,0 +1,15 @@
+#about {
+  background-color: #393939;
+  color: $white;
+  font-weight: 600;
+
+  header {
+    margin-bottom: rem-calc(20);
+  }
+
+  p {
+    &:last-child {
+      @extend .no-margin;
+    }
+  }
+}

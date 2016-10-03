@@ -1,0 +1,11 @@
+html, body {
+  @extend .small-12;
+  @extend .rel;
+  @extend .full-height;
+}
+figure {
+  margin: 0;
+}
+a {
+  @extend .trans;
+}

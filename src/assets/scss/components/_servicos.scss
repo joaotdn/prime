@@ -1,0 +1,125 @@
+#servicos {
+  background-color: $light-gray;
+
+  .section-title h3 {
+    border: 2px solid #801815;
+    border-top: none;
+    display: inline-block;
+    padding: rem-calc(0 45);
+    @extend .rel;
+
+    &:before, &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      width: 20px;
+      border-bottom: 2px solid #801815;
+    }
+    &:before {
+      left: 0;
+    }
+    &:after {
+      right: 0;
+    }
+
+    span {
+      top: rem-calc(-15)
+    }
+  }
+}
+
+#menu-servicos {
+  margin-top: rem-calc(30);
+
+  a {
+    color: #212121;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: rem-calc(10);
+    border-bottom: 5px solid transparent;
+  }
+
+  li {
+    &:hover, &.current {
+      a {
+        color: $white;
+        background-color: $secondary-color;
+        border-bottom-color: $primary-color;
+      }
+    }
+  }
+}
+
+#fotos-servicos {
+  margin-top: rem-calc(30);
+
+  figure {
+    margin-bottom: rem-calc(30);
+
+    &:last-child {
+      margin-bottom: rem-calc(0);
+    }
+
+    > a {
+      display: block;
+      height: rem-calc(250);
+
+      .mask {
+        @extend .abs;
+        @extend .small-12;
+        @extend .top-left;
+        @extend .full-height;
+        @extend .trans;
+        background-color: rgba($black, .7);
+        z-index: 99;
+      }
+
+      @include breakpoint(large up) {
+        &.big-foto {
+          height: rem-calc(500);
+        }
+      }
+
+      &:hover {
+        .mask {
+          background-color: transparent;
+        }
+        figcaption {
+          border-color: $white;
+        }
+        span {
+          color: $black;
+          background-color: $white;
+        }
+        i {
+          -webkit-transform: translateX(rem-calc(5));
+          -moz-transform: translateX(rem-calc(5));
+          -ms-transform: translateX(rem-calc(5));
+          -o-transform: translateX(rem-calc(5));
+          transform: translateX(rem-calc(5));
+        }
+      }
+    }
+
+    figcaption {
+      @extend .trans;
+      border: 6px solid transparent;
+      z-index: 99;
+      
+      span {
+        @extend .abs;
+        @extend .bottom-left;
+        @extend .small-12;
+        @extend .trans;
+        display: inline-block;
+        padding: rem-calc(20 10 14 10);
+        color: $white;
+      }
+    }
+  }
+}
+
+@include breakpoint(large up) {
+
+}

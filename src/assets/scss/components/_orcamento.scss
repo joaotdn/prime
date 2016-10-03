@@ -1,0 +1,34 @@
+#orcamento > .row {
+  @include flex-align-self(middle);
+  padding: rem-calc(40 0);
+  color: $white;
+
+  .btn-white {
+    font-size: rem-calc(20);
+    margin-top: rem-calc(40);
+    margin-bottom: 0;
+  }
+}
+
+#form-orcamento {
+  padding-top: rem-calc(80);
+  padding-bottom: rem-calc(40);
+
+  header {
+    color: $white;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  button {
+    font-size: rem-calc(18);
+  }
+}
+
+@include breakpoint(large up) {
+  #form-orcamento {
+    header {
+      margin-top: 10%;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+#jpreLoader {
+  text-align: center;
+  width: 100%;
+}
+#jpreOverlay {
+  background-color: #000;
+}
+#jprePercentage {
+  color: #fff;
+  display: inline-block;
+}
+.logo-white {
+  width: 157px;
+  height: 55px;
+  background-image: url('../img/logo-white.png');
+  display: block;
+  margin-bottom: rem-calc(20);
+}
+.preanim {
+  transition: all .3s linear;
+  animation-name: pre;
+  animation-duration: .5s;
+  animation-iteration-count: infinite;
+}
+@-webkit-keyframes pre {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}

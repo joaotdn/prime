@@ -1,0 +1,65 @@
+<section id="servicos" class="small-12 float-left section-block">
+    <div class="row">
+        <header class="small-12 columns text-center section-title vh wow fadeIn">
+            <h3>
+                <span class="rel">Nossos serviços</span>
+            </h3>
+        </header>
+
+        <nav id="menu-servicos" class="small-12 columns text-center show-for-large vh wow fadeInUp">
+            <ul class="menu d-iblock servicos-items" data-wow-duration=".5s">
+                <li class="current"><a href="#" title="Para-choque">Para-choque</a></li>
+                {{#each servicos}}
+                    <li><a href="#" title="{{this}}">{{this}}</a></li>
+                {{/each}}
+            </ul>
+        </nav>
+
+        <nav id="fotos-servicos" class="small-12 float-left vh wow zoomIn" data-wow-offset="150">
+            <figure class="small-12 medium-6 columns">
+                <a href="#" class="th big-foto rel" data-thumb="{{root}}assets/img/parachoque.jpg">
+                    <span class="mask"></span>
+                    <figcaption class="small-12 float-left full-height rel">
+                        <span class="float-left">Lorem ipsum dolor sit <i class="trans icon-right float-right"></i></span>
+                    </figcaption>
+                </a>
+            </figure>
+
+            <figure class="small-12 medium-6 columns">
+                <a href="#" class="th big-foto rel" data-thumb="{{root}}assets/img/parachoque.jpg">
+                    <span class="mask"></span>
+                    <figcaption class="small-12 float-left full-height rel">
+                        <span class="float-left">Lorem ipsum dolor sit <i class="trans icon-right float-right"></i></span>
+                    </figcaption>
+                </a>
+            </figure>
+
+            <figure class="small-12 medium-6 large-4 columns">
+                <a href="#" class="th rel" data-thumb="{{root}}assets/img/parachoque.jpg">
+                    <span class="mask"></span>
+                    <figcaption class="small-12 float-left full-height rel">
+                        <span class="float-left">Lorem ipsum dolor sit <i class="trans icon-right float-right"></i></span>
+                    </figcaption>
+                </a>
+            </figure>
+
+            <figure class="small-12 medium-6 large-4 columns">
+                <a href="#" class="th rel" data-thumb="{{root}}assets/img/parachoque.jpg">
+                    <span class="mask"></span>
+                    <figcaption class="small-12 float-left full-height rel">
+                        <span class="float-left">Lorem ipsum dolor sit <i class="trans icon-right float-right"></i></span>
+                    </figcaption>
+                </a>
+            </figure>
+
+            <figure class="small-12 medium-6 large-4 columns">
+                <a href="#" class="th rel" data-thumb="{{root}}assets/img/parachoque.jpg">
+                    <span class="mask"></span>
+                    <figcaption class="small-12 float-left full-height rel">
+                        <span class="float-left">Lorem ipsum dolor sit <i class="trans icon-right float-right"></i></span>
+                    </figcaption>
+                </a>
+            </figure>
+        </nav>
+    </div>
+</section>

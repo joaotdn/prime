@@ -1,0 +1,131 @@
+.open-menu {
+  display: none;
+  text-transform: uppercase;
+  background-color: $white;
+  padding: rem-calc(22 20);
+  font-weight: 600;
+
+  &.active {
+    background-color: $primary-color;
+    color: $white;
+    -webkit-transform: translateX(rem-calc(200));
+    -moz-transform: translateX(rem-calc(200));
+    -ms-transform: translateX(rem-calc(200));
+    -o-transform: translateX(rem-calc(200));
+    transform: translateX(rem-calc(200));
+  }
+}
+#main-menu {
+  z-index: 99999;
+
+  ul {
+    @extend .trans;
+    @extend .small-12;
+
+    background-color: rgba($white, .9);
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+
+    &.show {
+      visibility: visible;
+      opacity: 1;
+      -webkit-transform: translateY(0);
+      -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+      -o-transform: translateY(0);
+      transform: translateY(0);
+    }
+
+    a {
+      color: #212121;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: rem-calc(20);
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+  button {
+    display: none;
+  }
+}
+
+.open-menu-mo {
+  @include hamburger($primary-color, $primary-color);
+  position: absolute;
+  top: rem-calc(20);
+  left: 0.9375rem;
+}
+
+//QUERIES
+@include breakpoint(medium down) {
+  .row.show, .row.show > div {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+
+  .row.show > div {
+    position: relative;
+  }
+
+  .row.show {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  #main-menu {
+    ul {
+      padding-top: 20%;
+      height: 100%;
+      img {
+        display: none;
+      }
+    }
+
+    button {
+      position: absolute;
+      z-index: 999;
+      color: $primary-color;
+      font-size: rem-calc(32);
+      right: 0.9375rem;
+      top: rem-calc(20);
+
+      &.show {
+        display: block;
+      }
+    }
+  }
+}
+
+@include breakpoint(large up) {
+  .open-menu {
+    display: inline-block;
+  }
+  .open-menu-mo {
+    display: none;
+  }
+
+  #main-menu {
+    ul {
+      padding: rem-calc(20 0);
+      display: block;
+      width: rem-calc(200);
+      top: 0;
+      left: 0.9375rem;
+
+      img {
+        width: rem-calc(100);
+        margin-bottom: rem-calc(20);
+      }
+    }
+  }
+}

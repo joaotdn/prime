@@ -1,0 +1,55 @@
+#contato {
+  background-attachment: fixed;
+  color: $white;
+  padding-bottom: 0;
+
+  input, textarea {
+    @extend .no-margin;
+  }
+
+  button {
+    font-size: rem-calc(18);
+  }
+
+  li {
+    margin-bottom: rem-calc(20);
+  }
+
+  i {
+    width: rem-calc(80);
+    height: rem-calc(80);
+    background-color: $primary-color;
+    @extend .text-center;
+    line-height: rem-calc(80);
+    font-size: rem-calc(46);
+  }
+
+  form {
+    @include breakpoint(large up) {
+      margin-top: rem-calc(52);
+    }
+
+    margin-bottom: rem-calc(30);
+  }
+
+  .media-object-section {
+    vertical-align: middle;
+    @include breakpoint(small only) {
+      font-size: rem-calc(13);
+
+      i {
+        width: rem-calc(50);
+        height: rem-calc(50);
+        line-height: rem-calc(50);
+        font-size: rem-calc(20);
+      }
+    }
+  }
+
+  iframe {
+    margin: 0;
+    padding: 0;
+    @extend .rel;
+    bottom: rem-calc(-6);
+  }
+}

@@ -1,0 +1,135 @@
+#top-fixed {
+  @extend .trans;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
+  z-index: 999;
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  img {
+    width: rem-calc(112);
+    margin-top: rem-calc(14);
+  }
+}
+#home-top {
+  background-image: url('../img/bg-body.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.triangle {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 130px 140px 0 140px;
+  border-color: rgba(250, 250, 250, 0.75) transparent transparent transparent;
+}
+
+.triangle-red {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 110px 120px 0 120px;
+  border-color: $secondary-color transparent transparent transparent;
+}
+
+.logo {
+  padding-top: rem-calc(12);
+  img {
+    width: rem-calc(140);
+  }
+}
+
+.social {
+  @extend .rel;
+  z-index: 9;
+  padding-top: 25%;
+
+  a {
+    color: #fff;
+    font-size: rem-calc(20);
+    text-transform: uppercase;
+
+    &:hover {
+      i {
+        background-color: #fff;
+        color: #333;
+      }
+    }
+
+    i {
+      display: inline-block;
+      background-color: #000;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      border-radius: 100%;
+
+      &:before {
+        @extend .rel;
+        left: rem-calc(1);
+      }
+    }
+  }
+
+  @include breakpoint(portrait) {
+    padding-top: 50%;
+  }
+}
+.btn-down {
+  display: inline-block;
+  margin-bottom: rem-calc(25);
+  color: #fff;
+  padding: 1px;
+
+  span {
+    @extend .trans;
+    background-color: $primary-color;
+    width: rem-calc(40);
+    height: rem-calc(40);
+    border-radius: 100%;
+    line-height: rem-calc(40);
+    &:hover {
+      -webkit-transform: translateY(rem-calc(5));
+      -moz-transform: translateY(rem-calc(5));
+      -ms-transform: translateY(rem-calc(5));
+      -o-transform: translateY(rem-calc(5));
+      transform: translateY(rem-calc(5));
+      color: $white;
+    }
+  }
+}
+
+//QUERIES
+@include breakpoint(large up) {
+  .triangle {
+    border-width: 236px 280.5px 0 280.5px;
+    border-color: rgba(250, 250, 250, 0.75) transparent transparent transparent;
+  }
+  .logo {
+    padding-top: rem-calc(40);
+    img {
+      width: auto;
+    }
+  }
+}
+
